@@ -1,5 +1,5 @@
 # Sobre o Projeto:
-Desenvolvimento de um projeto que analisa editais e questões de concursos
+Repositorio criado para criar novos metodos para deixar o codigo limpo e reponsivo
 
 
 ### COMANDOS
