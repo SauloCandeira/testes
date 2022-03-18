@@ -1,0 +1,87 @@
+<html>
+<head>
+    <title>Timeline JSON data</title>
+
+    <style type="text/css">
+        body {
+            font-size: 10pt;
+            font-family: verdana, sans, arial, sans-serif;
+        }
+    </style>
+
+    <script type="text/javascript" src="./timeline.js"></script>
+    <link rel="stylesheet" type="text/css" href="./timeline.css">
+
+    <script type="text/javascript">
+        var timeline;
+        var data;
+
+        // Called when the Visualization API is loaded.
+        function drawVisualization() {
+            // Create a JSON data table
+            data = [
+                {
+                    'start': new Date(2021,01,08),
+                    'end': new Date(2021,05,06),
+                    'content': 'MINISTERIO DA ECONOMIA'
+                },
+                {
+                    'start': new Date(2021,5,24),
+                    'end': new Date(2021,8,26),
+                    'content': 'BANCO DO BRASIL'
+                },
+                {
+                    'start': new Date(2021,8,10),
+                    'end': new Date(2021,10,17),
+                    'content': 'CAIXA ECONOMICA'
+                },
+                {
+                    'start': new Date(2021,9,20),
+                    'end': new Date(2022,0,23),
+                    'content': 'FUNPRESP'
+                },
+                {
+                    'start': new Date(2022,0,03),
+                    'end': new Date(2022,2,20),
+                    'content': 'CGU'
+                },
+                {
+                    'start': new Date(2022,1,07),
+                    'end': new Date(2022,4,29),
+                    'content': 'TJDFT'
+                },
+            ];
+
+            // specify options
+            var options = {
+                'width':  '100%',
+                'height': '300px',
+                'editable': true,   // enable dragging and editing events
+                'style': 'box'
+            };
+
+            // Instantiate our timeline object.
+            timeline = new links.Timeline(document.getElementById('mytimeline'), options);
+
+            function onRangeChanged(properties) {
+                document.getElementById('info').innerHTML += 'rangechanged ' +
+                        properties.start + ' - ' + properties.end + '<br>';
+            }
+
+            // attach an event listener using the links events handler
+            links.events.addListener(timeline, 'rangechanged', onRangeChanged);
+
+            // Draw our timeline with the created data and options
+            timeline.draw(data);
+        }
+    </script>
+</head>
+
+<body onload="drawVisualization();">
+<h1>Timeline JSON data</h1>
+
+<div id="mytimeline"></div>
+
+
+</body>
+</html>
