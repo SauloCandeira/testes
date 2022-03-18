@@ -19,8 +19,8 @@ Repositorio criado para criar novos metodos para deixar o codigo limpo e reponsi
 
 ```mermaid
 flowchart LR
-X[Repository] -->|Jekyll-Theme| A[Jekyll]
-A[Github] -->|Config.yml| B[GH-Pages]
+
+B[Project]
 
 B --> C{APP}
 C --> J[Tasks]
