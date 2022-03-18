@@ -23,6 +23,7 @@ flowchart LR
 B[Project]
 
 B --> C{APP}
+C --> P[Profile]
 C --> J[Tasks]
 C --> K[Timeline]
 C --> L[Team]
