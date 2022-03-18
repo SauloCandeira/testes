@@ -2,13 +2,16 @@
 Repositorio criado para criar novos metodos para deixar o codigo limpo e reponsivo
 
 
-### COMANDOS
+### TEMPLATES
 
 ```
-1º - Criar Repository
-2º - Escolher Tema
-3º - Configurar Tema
-4º - Publicar pagina 
+1º - Profile
+2º - Tasks
+3º - Timeline
+4º - Daily Notes
+5º - Analytics
+6º - BPMN
+7º - Laboratory
 ```
 
 
